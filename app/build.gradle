@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.jetbranins.kotlin.kapt)
+    alias(libs.plugins.hilt.android.plugin)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -42,4 +45,35 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
+
+    //Dagger Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.logging.interceptor)
+
+    //Networking + Coroutines
+    implementation(libs.coroutines)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter)
+
+    //Background Work
+    implementation(libs.work.manager)
+
+    //Compose + support
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.material)
+    implementation(libs.compose.ui)
+    implementation(libs.compose.preview.support)
+    debugImplementation(libs.compose.preview.support.debug)
+    implementation(libs.compose.activity)
+    implementation(libs.compose.viewmodel)
+    implementation(libs.compose.livedata)
+    implementation(libs.compose.nav)
+    implementation(libs.compose.hilt.nav)
+
+    //Room
+    implementation(libs.room.db)
+    kapt(libs.room.db.compiler)
+    implementation(libs.room.ktx)
+    kapt(libs.room.ktx.compiler)
 }
