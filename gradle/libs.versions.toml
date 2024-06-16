@@ -61,4 +61,3 @@ jetbranins-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotl
 hilt-android-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize",  version.ref = "kotlin" }
-

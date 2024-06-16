@@ -73,6 +73,7 @@ dependencies {
     debugImplementation(libs.compose.preview.support.debug)
     implementation(libs.compose.activity)
     implementation(libs.compose.viewmodel)
+    implementation(libs.lifecycle.vm)
     implementation(libs.compose.livedata)
     implementation(libs.compose.nav)
     implementation(libs.compose.hilt.nav)
